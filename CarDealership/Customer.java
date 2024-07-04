@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class Customer {
 
-
+static String decision;
 
 
     public static void Customerinfo(){
+        
+        
         System.out.print("What is your name?  : ");
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
@@ -17,7 +19,8 @@ public class Customer {
         System.out.println( " Do you have any prefer employee to assit you today? "
         +" you can say no is you dont have any preference or can tell the name of the employee.");
  
-     String decision = sc.nextLine();
+    decision = sc.nextLine();
+     
 
         switch (decision) {
             case "no":
@@ -29,11 +32,17 @@ public class Customer {
                 break;
         }
 
-        sc.close();
     }
 
-    public String decision;
 
+    public String getDecision() {
+        return decision;
+    }
+
+
+    public void setDecision(String decision) {
+        Customer.decision = decision;
+    }
 
     
 }

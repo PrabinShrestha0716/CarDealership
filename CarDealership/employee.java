@@ -3,16 +3,16 @@ package CarDealership;
 public class employee {
 
 
-    public static void employeeInfo(){
+    public static  void employeeInfo(){
 
 
             Customer cust = new Customer();
 
-            String employeeName =cust.decision;
+            String employeeName = cust.getDecision();
 
-            System.out.println(employeeName);
+    
 
-            if(employeeName =="no"){
+            if(employeeName.equalsIgnoreCase("no") ){
                 System.out.println(" Hi, I am Robert Adision, I will be assiting you");
             }
             else{
@@ -21,6 +21,8 @@ public class employee {
 
 
     }
+
+
 
 
     
